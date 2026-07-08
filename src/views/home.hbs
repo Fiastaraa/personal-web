@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<title>Fiastara Portfolio</title>
+
+</head>
+
+
+
+<body>
+
+{{> navbar}}
+
+<section class="hero">
+
+    <div class="hero-image">
+
+        <img src="/assets/profile.jpeg" alt="Fiastara">
+
+    </div>
+
+    <div class="hero-content">
+
+        <h1>
+            Hi, I'm
+            <span>Fiastara</span>
+            👋
+        </h1>
+
+        <h2>
+            Full Stack Developer
+        </h2>
+
+        <p>
+            I am an Information Systems graduate passionate about
+            Full Stack Development, Business Intelligence, and Data Analytics.
+            I enjoy building modern web applications, creating interactive
+            user experiences, and transforming business data into meaningful insights.
+        </p>
+
+        <div class="info">
+
+            <p>📍 South Tangerang, Banten, Indonesia</p>
+
+            <p>✉️ fiasseikha@gmail.com</p>
+
+        </div>
+
+        <div class="buttons">
+
+            <a href="/contact" class="btn-green">
+
+                Let's Talk
+
+            </a>
+
+            <a href="/assets/CV-ATS-2026-Fiastara.pdf" class="btn-dark">
+
+                Download CV
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="tech-stack" id="techstack">
+
+    <h2>Tech Stack - Tools I Use Everyday</h2>
+
+    <div class="stack-grid">
+
+        <div class="stack-card">
+            <img src="/assets/html.png" alt="HTML">
+            <p>HTML5</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/css.png" alt="CSS">
+            <p>CSS3</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/javascript.png" alt="JavaScript">
+            <p>JavaScript</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/bootstrap.png" alt="Bootstrap">
+            <p>Bootstrap</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/postgresql.png" alt="PostgreSQL">
+            <p>PostgreSQL</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/python.png" alt="Python">
+            <p>Python</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/figma.png" alt="Figma">
+            <p>Figma</p>
+        </div>
+
+        <div class="stack-card">
+            <img src="/assets/android.png" alt="Android Studio">
+            <p>Android Studio</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="experience" id="experience">
+
+    <h2>Work Experience</h2>
+
+    <div class="experience-card">
+
+        <div class="experience-header">
+
+            <div>
+
+                <h3>Freelance Full Stack Developer</h3>
+
+                <h4>Jakarta, Indonesia</h4>
+
+            </div>
+
+            <span>Aug 2023 - Present</span>
+
+        </div>
+
+        <ul>
+
+            <li>Developed Fullstack Web & Android applications.</li>
+
+            <li>Designed responsive UI/UX using Figma.</li>
+
+            <li>Integrated Firebase & REST APIs.</li>
+
+            <li>Created analytics dashboards using PostgreSQL.</li>
+
+            <li>Improved Android user engagement by 40%.</li>
+
+        </ul>
+
+        <div class="badge-group">
+
+            <span>JavaScript</span>
+
+            <span>HTML</span>
+
+            <span>CSS</span>
+
+            <span>Android Studio</span>
+
+            <span>PostgreSQL</span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="experience-card">
+
+        <div class="experience-header">
+
+            <div>
+
+                <h3>IBM Academy Hybrid Cloud & AI Intern</h3>
+
+                <h4>Infinite Learning Indonesia</h4>
+
+            </div>
+
+            <span>Aug 2023 - Jan 2024</span>
+
+        </div>
+
+        <ul>
+
+            <li>Learned AI, Hybrid Cloud, and Cyber Security.</li>
+
+            <li>Completed IBM SkillsBuild hands-on labs.</li>
+
+            <li>Worked on AI case studies and capstone project.</li>
+
+        </ul>
+
+        <div class="badge-group">
+
+            <span>IBM Watsonx</span>
+
+            <span>AI</span>
+
+            <span>Cloud</span>
+
+            <span>RedHat</span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="experience-card">
+
+        <div class="experience-header">
+
+            <div>
+
+                <h3>Front End Developer Intern</h3>
+
+                <h4>Humanity First Indonesia</h4>
+
+            </div>
+
+            <span>Mar 2023 - Aug 2023</span>
+
+        </div>
+
+        <ul>
+
+            <li>Developed company website using WordPress.</li>
+
+            <li>Designed responsive UI.</li>
+
+            <li>Maintained digital platform.</li>
+
+        </ul>
+
+        <div class="badge-group">
+
+            <span>WordPress</span>
+
+            <span>HTML</span>
+
+            <span>CSS</span>
+
+            <span>JavaScript</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="projects" id="projects">
+
+    <h2>Featured Projects</h2>
+
+    <div class="project-grid">
+
+        {{#each projects}}
+
+        <div class="project-card">
+
+            <img src="{{image}}" alt="{{title}}">
+
+            <h3>{{title}}</h3>
+
+            <p>{{description}}</p>
+
+            <div class="project-tech">
+
+                {{#each tech}}
+
+                    <span>{{this}}</span>
+
+                {{/each}}
+
+            </div>
+
+            <a href="{{github}}" target="_blank">
+
+                View Project →
+
+            </a>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</section>
+
+
+<section class="contact-section" id="contact">
+
+    <h2>Let's Work Together</h2>
+
+    <p>
+        Interested in collaborating or discussing a project?
+        Feel free to contact me.
+    </p>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <h3>Email</h3>
+
+            <p>fiasseikha@gmail.com</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h3>Location</h3>
+
+            <p>South Tangerang, Indonesia</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h3>LinkedIn</h3>
+
+            <p>linkedin.com/in/fiastara</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h3>GitHub</h3>
+
+            <p>github.com/Fiastaraa</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{{> footer}}
+</body>
+
+</html>

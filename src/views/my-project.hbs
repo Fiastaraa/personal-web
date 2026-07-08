@@ -1,0 +1,39 @@
+{{> navbar}}
+
+<section class="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project-grid">
+
+        {{#each projects}}
+
+        <div class="project-card">
+
+            <img src="{{image}}" alt="{{title}}">
+
+            <h3>{{title}}</h3>
+
+            <p><strong>{{duration}}</strong></p>
+
+            <p>{{description}}</p>
+
+            <div class="project-tech">
+
+                {{#each tech}}
+
+                <span>{{this}}</span>
+
+                {{/each}}
+
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</section>
+
+{{> footer}}
