@@ -77,19 +77,12 @@ body{
 
 
 .hero{
-
-    width:1200px;
-
+    width:min(1200px, 92%);
     margin:60px auto;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     gap:60px;
-
 }
 
 .hero-image img{
@@ -171,18 +164,18 @@ body{
 }
 
 
+.tech-stack,
+.experience,
+.projects,
+.contact-section{
+    width:min(1200px,92%);
+    margin:100px auto;
+}
+
 
 /* ===========================
    TECH STACK
 =========================== */
-
-.tech-stack{
-
-    width:1200px;
-
-    margin:80px auto;
-
-}
 
 .tech-stack h2{
 
@@ -248,14 +241,6 @@ body{
 /* ======================
     EXPERIENCE
 ====================== */
-
-.experience{
-
-    width:1200px;
-
-    margin:100px auto;
-
-}
 
 .experience h2{
 
@@ -355,14 +340,6 @@ body{
    PROJECTS
 =========================== */
 
-.projects{
-
-    width:1200px;
-
-    margin:100px auto;
-
-}
-
 .projects h2{
 
     margin-bottom:40px;
@@ -397,7 +374,9 @@ body{
 
 .project-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
 
 }
 
@@ -470,16 +449,6 @@ body{
         CONTACT
 ========================== */
 
-.contact-section{
-
-    width:1200px;
-
-    margin:100px auto;
-
-    text-align:center;
-
-}
-
 .contact-section h2{
 
     font-size:36px;
@@ -548,3 +517,420 @@ footer p{
     color:#dcdcdc;
 
 }
+
+
+
+/* ===========================
+   MY PROJECT
+=========================== */
+
+.my-project{
+    width:min(1200px,92%);
+    margin:70px auto 100px;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.page-title h1{
+    font-size:48px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.page-title p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+/* FORM */
+
+.project-form-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:80px;
+
+}
+
+.project-form-card h2{
+
+    margin-bottom:25px;
+
+}
+
+.project-form-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.project-form-card input,
+.project-form-card textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+}
+
+.project-form-card textarea{
+
+    min-height:150px;
+
+}
+
+.date-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.checkbox-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.checkbox-group label{
+
+    background:#f7f7f7;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.project-form-card button{
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#10b981;
+
+    color:#fff;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.project-form-card button:hover{
+
+    background:#059669;
+
+}
+
+.my-projects-list h2{
+
+    margin-bottom:40px;
+
+    font-size:34px;
+
+}
+
+/* PROJECT CARD */
+
+.project-content{
+
+    padding:22px;
+
+}
+
+.project-content h3{
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.project-content p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+.tech-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.tech-list span{
+
+    background:#eef6ff;
+
+    padding:7px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+.project-button{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.project-button a{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    color:#fff;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.project-button a:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.btn-detail{
+
+    background:#2563eb;
+
+}
+
+.btn-edit{
+
+    background:#f59e0b;
+
+}
+
+.btn-delete{
+
+    background:#ef4444;
+
+}
+
+@media(max-width:768px){
+
+    .date-group{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .checkbox-group{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ===========================
+   BACK LINK
+=========================== */
+
+.back-link{
+
+    display:inline-block;
+
+    margin:40px auto 0;
+
+    color:#555;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.back-link:hover{
+
+    color:#10b981;
+
+}
+
+
+/* ===========================
+   PROJECT DETAIL
+=========================== */
+
+.project-detail{
+
+    width:min(1000px,92%);
+
+    margin:0 auto 100px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.detail-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-top:20px;
+
+}
+
+.detail-card img{
+
+    width:100%;
+
+    max-height:420px;
+
+    object-fit:cover;
+
+}
+
+.detail-content{
+
+    padding:40px;
+
+}
+
+.detail-content h1{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+    color:#222;
+
+}
+
+.detail-dates{
+
+    color:#10b981;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.detail-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.detail-content .tech-list{
+
+    margin-bottom:30px;
+
+}
+
+.detail-content .project-button{
+
+    max-width:420px;
+
+}
+
+
+/* ===========================
+   EDIT FORM BUTTONS
+=========================== */
+
+.edit-form-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.btn-cancel{
+
+    color:#666;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-cancel:hover{
+
+    color:#ef4444;
+
+}
+
+

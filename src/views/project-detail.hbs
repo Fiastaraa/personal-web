@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<title>{{project.projectName}} | Fiastara Portfolio</title>
+
+</head>
+
+
+
+<body>
+
+{{> navbar}}
+
+<section class="project-detail">
+
+    <a href="/my-project" class="back-link">
+        ← Back to Projects
+    </a>
+
+    <div class="detail-card">
+
+        <img src="{{project.image}}" alt="{{project.projectName}}">
+
+        <div class="detail-content">
+
+            <h1>{{project.projectName}}</h1>
+
+            <div class="detail-dates">
+                📅 {{project.startDate}} &nbsp;–&nbsp; {{project.endDate}}
+            </div>
+
+            <p>{{project.description}}</p>
+
+            <div class="tech-list">
+
+                {{#each project.technologies}}
+
+                <span>{{this}}</span>
+
+                {{/each}}
+
+            </div>
+
+            <div class="project-button">
+
+                <a href="/edit-project/{{project.id}}" class="btn-edit">
+                    Edit Project
+                </a>
+
+                <a href="/delete-project/{{project.id}}" class="btn-delete">
+                    Delete Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{{> footer}}
+</body>
+
+</html>

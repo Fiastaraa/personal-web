@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<title>Edit {{project.projectName}} | Fiastara Portfolio</title>
+
+</head>
+
+
+
+<body>
+
+{{> navbar}}
+
+<section class="my-project">
+
+    <div class="page-title">
+
+        <h1>Edit Project</h1>
+
+        <p>
+            Update the details of your project below.
+        </p>
+
+    </div>
+
+    <div class="project-form-card">
+
+        <h2>Edit "{{project.projectName}}"</h2>
+
+        <form action="/edit-project/{{project.id}}" method="POST">
+
+            <input
+                type="text"
+                name="projectName"
+                placeholder="Project Name"
+                value="{{project.projectName}}"
+                required>
+
+            <div class="date-group">
+
+                <div>
+
+                    <label>Start Date</label>
+
+                    <input
+                        type="date"
+                        name="startDate"
+                        value="{{project.startDate}}"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>End Date</label>
+
+                    <input
+                        type="date"
+                        name="endDate"
+                        value="{{project.endDate}}"
+                        required>
+
+                </div>
+
+            </div>
+
+            <textarea
+                name="description"
+                placeholder="Project Description"
+                required>{{project.description}}</textarea>
+
+            <div class="edit-form-buttons">
+
+                <button type="submit">
+                    Save Changes
+                </button>
+
+                <a href="/my-project" class="btn-cancel">
+                    Cancel
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{{> footer}}
+</body>
+
+</html>
