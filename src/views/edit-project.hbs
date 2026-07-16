@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/css/style.css">
-
 <title>Edit {{project.projectName}} | Fiastara Portfolio</title>
-
 </head>
 
-
-
 <body>
-
 {{> navbar}}
+{{> flash}}
 
 <section class="my-project">
 
     <div class="page-title">
-
         <h1>Edit Project</h1>
-
-        <p>
-            Update the details of your project below.
-        </p>
-
+        <p>Update the details of your project below.</p>
     </div>
 
     <div class="project-form-card">
@@ -49,27 +34,21 @@ content="width=device-width, initial-scale=1.0">
             <div class="date-group">
 
                 <div>
-
                     <label>Start Date</label>
-
                     <input
                         type="date"
                         name="startDate"
                         value="{{project.startDate}}"
                         required>
-
                 </div>
 
                 <div>
-
                     <label>End Date</label>
-
                     <input
                         type="date"
                         name="endDate"
                         value="{{project.endDate}}"
                         required>
-
                 </div>
 
             </div>
@@ -79,16 +58,24 @@ content="width=device-width, initial-scale=1.0">
                 placeholder="Project Description"
                 required>{{project.description}}</textarea>
 
+            <div class="checkbox-group">
+
+                {{#each technologies}}
+                <label>
+                    <input
+                        type="checkbox"
+                        name="technologies"
+                        value="{{this.id}}"
+                        {{isChecked ../selectedTech this.id}}>
+                    {{this.name}}
+                </label>
+                {{/each}}
+
+            </div>
+
             <div class="edit-form-buttons">
-
-                <button type="submit">
-                    Save Changes
-                </button>
-
-                <a href="/my-project" class="btn-cancel">
-                    Cancel
-                </a>
-
+                <button type="submit">Save Changes</button>
+                <a href="/my-project" class="btn-cancel">Cancel</a>
             </div>
 
         </form>
@@ -99,5 +86,4 @@ content="width=device-width, initial-scale=1.0">
 
 {{> footer}}
 </body>
-
 </html>

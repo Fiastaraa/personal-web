@@ -4,6 +4,42 @@
     box-sizing:border-box;
 }
 
+
+/* ===========================
+   FLASH / ALERTS
+=========================== */
+
+.alert{
+    position:fixed;
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1100px,92%);
+    padding:12px 18px;
+    border-radius:10px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.08);
+    z-index:1100;
+    font-weight:600;
+    margin:6px auto;
+    transition:opacity .25s ease, transform .25s ease;
+}
+
+.alert + .alert{ /* stack multiple alerts */
+    margin-top:10px;
+}
+
+.alert-success{
+    background:#ecfdf5;
+    color:#065f46;
+    border-left:6px solid #10b981;
+}
+
+.alert-error{
+    background:#fff1f2;
+    color:#7f1d1d;
+    border-left:6px solid #ef4444;
+}
+
 body{
 
     font-family:Arial, Helvetica, sans-serif;
